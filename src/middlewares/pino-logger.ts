@@ -7,7 +7,7 @@ import env from '@/env';
 export function pinoLogger() {
 	return logger({
 		pino: pino(
-			{ level: env.NODE_ENV === 'development' ? 'debug' : 'info' },
+			{ level: env.LOG_LEVEL || 'info' },
 			env.NODE_ENV === 'development' ? pretty() : undefined
 		),
 		http: {
