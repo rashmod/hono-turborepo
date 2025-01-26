@@ -1,4 +1,5 @@
 import { integer, sqliteTable, text } from 'drizzle-orm/sqlite-core';
+import { createInsertSchema, createSelectSchema } from 'drizzle-zod';
 
 export const tasks = sqliteTable('tasks', {
 	id: integer('id', { mode: 'number' }).primaryKey({ autoIncrement: true }),
@@ -9,4 +10,12 @@ export const tasks = sqliteTable('tasks', {
 	updatedAt: integer('updated_at', { mode: 'timestamp' })
 		.$defaultFn(() => new Date())
 		.$onUpdate(() => new Date()),
+});
+
+export const selectTasksSchema = createSelectSchema(tasks);
+export const insertTaskSchema = createInsertSchema(tasks).omit({
+	id: true,
+	createdAt: true,
+	updatedAt: true,
+	done: true,
 });
