@@ -5,7 +5,13 @@ import * as HttpStatusPhrases from 'stoker/http-status-phrases';
 import { db } from '@/db';
 import { tasks } from '@/db/schema';
 import type { AppRouteHandler } from '@/lib/types';
-import type { CreateRoute, GetOneRoute, ListRoute, UpdateRoute } from '@/routes/tasks/routes';
+import type {
+	CreateRoute,
+	GetOneRoute,
+	ListRoute,
+	RemoveRoute,
+	UpdateRoute,
+} from '@/routes/tasks/routes';
 
 export const listHandler: AppRouteHandler<ListRoute> = async (c) => {
 	const tasks = await db.query.tasks.findMany();
@@ -60,4 +66,22 @@ export const updateHandler: AppRouteHandler<UpdateRoute> = async (c) => {
 		.returning();
 
 	return c.json(updatedTask, HttpStatusCodes.OK);
+};
+
+export const removeHandler: AppRouteHandler<RemoveRoute> = async (c) => {
+	const taskParam = c.req.valid('param');
+
+	const task = await db.query.tasks.findFirst({
+		where(fields, operators) {
+			return operators.eq(fields.id, taskParam.id);
+		},
+	});
+
+	if (!task) {
+		return c.json({ message: HttpStatusPhrases.NOT_FOUND }, HttpStatusCodes.NOT_FOUND);
+	}
+
+	await db.delete(tasks).where(eq(tasks.id, taskParam.id));
+
+	return c.body(null, HttpStatusCodes.NO_CONTENT);
 };

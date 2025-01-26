@@ -6,4 +6,5 @@ export const router = createRouter()
 	.openapi(routes.list, handler.listHandler)
 	.openapi(routes.create, handler.createHandler)
 	.openapi(routes.getOne, handler.getOneHandler)
-	.openapi(routes.update, handler.updateHandler);
+	.openapi(routes.update, handler.updateHandler)
+	.openapi(routes.remove, handler.removeHandler);
