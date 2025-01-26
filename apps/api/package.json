@@ -28,5 +28,6 @@
 		"prettier": "^3.4.2",
 		"tsx": "^4.7.1",
 		"vitest": "^3.0.4"
-	}
+	},
+	"packageManager": "pnpm@9.10.0"
 }
