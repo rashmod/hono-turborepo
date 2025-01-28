@@ -1,6 +1,5 @@
 {
 	"name": "@tasks/api",
-	"type": "module",
 	"scripts": {
 		"dev": "tsx watch src/index.ts",
 		"test": "vitest"
@@ -24,6 +23,7 @@
 		"zod": "^3.24.1"
 	},
 	"devDependencies": {
+		"@tasks/typescript-config": "workspace:*",
 		"@trivago/prettier-plugin-sort-imports": "^5.2.1",
 		"@types/node": "^20.11.17",
 		"drizzle-kit": "^0.30.2",
