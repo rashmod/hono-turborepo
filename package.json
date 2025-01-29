@@ -2,11 +2,12 @@
   "private": true,
   "scripts": {
     "build": "turbo run build",
+    "start": "turbo run start",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "turbo run format",
     "clean": "turbo run clean",
-    "clean:turbo": "turbo run clean:turbo"
+    "clean:turbo": "turbo run clean:turbo && rm -rf .turbo"
   },
   "devDependencies": {
     "turbo": "latest"
