@@ -1,9 +1,19 @@
 {
-  "name": "@tasks/typescript-config",
-  "version": "0.0.0",
-  "private": true,
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  }
+	"name": "@tasks/typescript-config",
+	"type": "module",
+	"scripts": {
+		"format": "prettier --write .",
+		"clean": "rm -rf dist node_modules",
+		"clean:turbo": "rm -rf .turbo"
+	},
+	"version": "0.0.0",
+	"private": true,
+	"license": "MIT",
+	"publishConfig": {
+		"access": "public"
+	},
+	"devDependencies": {
+		"@tasks/prettier-config": "workspace:*",
+		"typescript": "^4.9.5"
+	}
 }
