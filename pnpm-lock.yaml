@@ -63,6 +63,9 @@ importers:
         specifier: ^3.24.1
         version: 3.24.1
     devDependencies:
+      '@tasks/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/eslint-config
       '@tasks/prettier-config':
         specifier: workspace:*
         version: link:../../packages/prettier-config
