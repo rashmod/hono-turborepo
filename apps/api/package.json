@@ -3,9 +3,11 @@
 	"type": "module",
 	"scripts": {
 		"dev": "tsx watch src/index.ts",
-		"build": "tsc",
+		"build": "tsc && tsc-alias",
 		"format": "prettier --write .",
-		"test": "vitest"
+		"test": "vitest",
+		"clean": "rm -rf dist node_modules",
+		"clean:turbo": "rm -rf .turbo"
 	},
 	"version": "1.0.0",
 	"exports": {},
@@ -23,6 +25,8 @@
 		"pino": "^9.6.0",
 		"pino-pretty": "^13.0.0",
 		"stoker": "^1.4.2",
+		"tsc-alias": "^1.8.10",
+		"typescript": "^5.7.3",
 		"zod": "^3.24.1"
 	},
 	"devDependencies": {

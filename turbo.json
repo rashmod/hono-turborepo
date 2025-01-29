@@ -13,6 +13,8 @@
     "format": {
       "inputs": ["./**/*.{js,jsx,ts,tsx}"],
       "outputs": ["./**/*.{js,jsx,ts,tsx}"]
-    }
+    },
+    "clean": {},
+    "clean:turbo": {}
   }
 }
