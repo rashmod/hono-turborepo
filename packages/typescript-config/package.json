@@ -2,7 +2,8 @@
 	"name": "@tasks/typescript-config",
 	"type": "module",
 	"scripts": {
-		"format": "prettier --write .",
+		"format:check": "prettier --check .",
+		"format:fix": "prettier --write .",
 		"clean": "rm -rf dist node_modules",
 		"clean:turbo": "rm -rf .turbo"
 	},

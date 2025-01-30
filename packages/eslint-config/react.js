@@ -1,6 +1,7 @@
-import baseConfig from './base.js';
 import pluginReact from 'eslint-plugin-react';
 import globals from 'globals';
+
+import baseConfig from './base.js';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [

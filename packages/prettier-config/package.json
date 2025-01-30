@@ -5,6 +5,12 @@
 	"main": "./index.js",
 	"type": "module",
 	"types": "./index.d.ts",
+	"scripts": {
+		"format:check": "prettier --check .",
+		"format:fix": "prettier --write .",
+		"clean": "rm -rf dist node_modules",
+		"clean:turbo": "rm -rf .turbo"
+	},
 	"exports": {
 		"import": "./index.js"
 	},

@@ -14,10 +14,10 @@
       "cache": false,
       "persistent": true
     },
-    "format": {
-      "inputs": ["./**/*.{js,jsx,ts,tsx}"],
-      "outputs": ["./**/*.{js,jsx,ts,tsx}"]
-    },
+
+    "format:check": {},
+    "format:fix": {},
+
     "clean": {},
     "clean:turbo": {}
   }

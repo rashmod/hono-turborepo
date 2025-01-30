@@ -1,6 +1,6 @@
 import pluginJs from '@eslint/js';
-import tseslint from 'typescript-eslint';
 import 'eslint-plugin-only-warn';
+import tseslint from 'typescript-eslint';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
