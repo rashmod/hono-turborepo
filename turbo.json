@@ -18,6 +18,9 @@
     "format:check": {},
     "format:fix": {},
 
+    "lint:check": {},
+    "lint:fix": {},
+
     "clean": {},
     "clean:turbo": {}
   }
