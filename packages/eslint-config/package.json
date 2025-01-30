@@ -10,7 +10,8 @@
 	"version": "0.0.0",
 	"private": true,
 	"exports": {
-		"./base": "./base.js"
+		"./base": "./base.js",
+		"./react": "./react.js"
 	},
 	"license": "MIT",
 	"publishConfig": {
@@ -20,6 +21,7 @@
 		"@eslint/js": "^9.19.0",
 		"@tasks/prettier-config": "workspace:*",
 		"eslint": "^9.19.0",
+		"eslint-plugin-only-warn": "^1.1.0",
 		"eslint-plugin-react": "^7.37.4",
 		"globals": "^15.14.0",
 		"typescript-eslint": "^8.22.0"
