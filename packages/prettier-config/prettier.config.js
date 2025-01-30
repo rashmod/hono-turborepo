@@ -1,4 +1,6 @@
 export default {
+	plugins: ['@trivago/prettier-plugin-sort-imports'],
+
 	printWidth: 100,
 	useTabs: true,
 	trailingComma: 'es5',
@@ -9,4 +11,8 @@ export default {
 	jsxSingleQuote: false,
 	bracketSameLine: false,
 	endOfLine: 'lf',
+
+	importOrder: ['<THIRD_PARTY_MODULES>', '^@/', '^[./]'],
+	importOrderSeparation: true,
+	importOrderSortSpecifiers: true,
 };
